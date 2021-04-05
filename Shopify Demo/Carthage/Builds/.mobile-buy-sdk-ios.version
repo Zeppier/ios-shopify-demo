@@ -1,0 +1,17 @@
+{
+  "commitish" : "5.3.0",
+  "iOS" : [
+    {
+      "hash" : "0ccbdb32df6a397e035ef31a36c776ed0fb9e02cb7ee6bd534d52784082389b6",
+      "name" : "Buy",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)"
+    },
+    {
+      "hash" : "a11db5ae7cdf99d6cede7b079a8232fd7d1316376684477d2e76517a8ce240a7",
+      "name" : "Pay",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)"
+    }
+  ]
+}

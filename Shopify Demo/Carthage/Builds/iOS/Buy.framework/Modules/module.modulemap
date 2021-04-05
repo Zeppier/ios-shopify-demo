@@ -1,0 +1,11 @@
+framework module Buy {
+  umbrella header "Buy.h"
+
+  export *
+  module * { export * }
+}
+
+module Buy.Swift {
+    header "Buy-Swift.h"
+    requires objc
+}
