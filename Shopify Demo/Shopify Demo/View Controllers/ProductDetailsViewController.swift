@@ -105,10 +105,28 @@ extension ProductDetailsViewController: ProductHeaderDelegate {
          
         arrProductBuy.add(dictProductBuy)
         print("Product added to carts: \(arrProductBuy)")
-        //IntemptTracker.track("Purchase", withProperties: arrProductBuy as? [Any], error: nil)
-        IntemptTracker.track("Purchase", withProperties: arrProductBuy as? [Any]) { (_, _) in
-            
+        /*IntemptTracker.track("Purchase", withProperties: arrProductBuy as? [Any]) { (status, result, error) in
+            if(status) {
+                if let dictResult = result as? [String: Any] {
+                    print(dictResult)
+                }
+            }
+            else {
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
+        }*/
+        IntemptTracker.track("Purchase", withProperties: arrProductBuy as? [Any]) { (status, result, error) in
+            if(status) {
+            }
+            else {
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
         }
+        
         isAddedToCart = true
     }
 }

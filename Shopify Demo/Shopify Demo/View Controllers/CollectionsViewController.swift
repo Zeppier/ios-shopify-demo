@@ -37,14 +37,14 @@ class CollectionsViewController: UIViewController {
         super.viewDidLoad()
 
         
-        if(IntemptConfig.orgId == "Your Organization Id" || IntemptConfig.sourceId == "Your Source Id" || IntemptConfig.orgId == "Your Token") {
+        if(IntemptOptions.orgId == "Your Organization Id" || IntemptOptions.sourceId == "Your Source Id" || IntemptOptions.orgId == "Your Token") {
             //assertionFailure("Please configure your Intempt profile to proceed.")
             print("Please configure your Intempt profile to proceed.")
             //return
         }
 
         //self.fetchCollections()
-        self.fetchSegmentWith(sourceId: IntemptConfig.sourceId, visitorId: (IntemptClient.shared()?.getVisitorId())!)
+        self.fetchSegmentWith(sourceId: IntemptOptions.sourceId, visitorId: (IntemptClient.shared()?.getVisitorId())!)
 
         self.lbl1.text = "Accessories"
         self.lbl2.text = "Pants"
@@ -438,7 +438,7 @@ extension CollectionsViewController: productDelegate {
         if status {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 self.blurView.isHidden = false
-                self.fetchSegmentWith(sourceId: IntemptConfig.sourceId, visitorId: (IntemptClient.shared()?.getVisitorId())!)
+                self.fetchSegmentWith(sourceId: IntemptOptions.sourceId, visitorId: (IntemptClient.shared()?.getVisitorId())!)
             }
         }
         

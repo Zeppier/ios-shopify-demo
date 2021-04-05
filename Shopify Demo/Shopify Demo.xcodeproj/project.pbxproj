@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C08735E25166C0D00D2FC77 /* Pay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C08735D25166C0D00D2FC77 /* Pay.framework */; };
-		0C08735F25166C0D00D2FC77 /* Pay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C08735D25166C0D00D2FC77 /* Pay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0C08736125166C1C00D2FC77 /* Buy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C08736025166C1C00D2FC77 /* Buy.framework */; };
-		0C08736225166C1C00D2FC77 /* Buy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C08736025166C1C00D2FC77 /* Buy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C3542B424FFC1270023C271 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3542B324FFC1270023C271 /* Constants.swift */; };
 		0C4D74EB251376E4001F4300 /* Intempt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4D74E9251376DF001F4300 /* Intempt.framework */; };
 		0C4D74EC251376E4001F4300 /* Intempt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4D74E9251376DF001F4300 /* Intempt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C9E551F261744850041022A /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9E551E261744850041022A /* AppTrackingTransparency.framework */; };
+		0CE66FB625C94A2E00E3AA64 /* Buy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE66FB425C94A2E00E3AA64 /* Buy.framework */; };
+		0CE66FB725C94A2E00E3AA64 /* Buy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE66FB425C94A2E00E3AA64 /* Buy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0CE66FB825C94A2E00E3AA64 /* Pay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE66FB525C94A2E00E3AA64 /* Pay.framework */; };
+		0CE66FB925C94A2E00E3AA64 /* Pay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE66FB525C94A2E00E3AA64 /* Pay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0CFCC08F25162C84009CBE9D /* ShippingRateViewModel+PayShippingRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFCC07825162C84009CBE9D /* ShippingRateViewModel+PayShippingRate.swift */; };
 		0CFCC09025162C84009CBE9D /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFCC07925162C84009CBE9D /* PaymentViewModel.swift */; };
 		0CFCC09125162C84009CBE9D /* ShippingRateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFCC07A25162C84009CBE9D /* ShippingRateViewModel.swift */; };
@@ -116,8 +117,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				0C4D74EC251376E4001F4300 /* Intempt.framework in Embed Frameworks */,
-				0C08735F25166C0D00D2FC77 /* Pay.framework in Embed Frameworks */,
-				0C08736225166C1C00D2FC77 /* Buy.framework in Embed Frameworks */,
+				0CE66FB725C94A2E00E3AA64 /* Buy.framework in Embed Frameworks */,
+				0CE66FB925C94A2E00E3AA64 /* Pay.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,11 +126,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0C08735D25166C0D00D2FC77 /* Pay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pay.framework; path = "Shopify Demo/Pay.framework"; sourceTree = "<group>"; };
-		0C08736025166C1C00D2FC77 /* Buy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Buy.framework; path = "Shopify Demo/Buy.framework"; sourceTree = "<group>"; };
 		0C3542B324FFC1270023C271 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0C4D74E825137590001F4300 /* Retail Sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Retail Sample.entitlements"; sourceTree = "<group>"; };
 		0C4D74E9251376DF001F4300 /* Intempt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Intempt.framework; sourceTree = "<group>"; };
+		0C9E551E261744850041022A /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
+		0CE66FB425C94A2E00E3AA64 /* Buy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Buy.framework; path = Carthage/Build/iOS/Buy.framework; sourceTree = "<group>"; };
+		0CE66FB525C94A2E00E3AA64 /* Pay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pay.framework; path = Carthage/Build/iOS/Pay.framework; sourceTree = "<group>"; };
 		0CFCC07825162C84009CBE9D /* ShippingRateViewModel+PayShippingRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShippingRateViewModel+PayShippingRate.swift"; sourceTree = "<group>"; };
 		0CFCC07925162C84009CBE9D /* PaymentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
 		0CFCC07A25162C84009CBE9D /* ShippingRateViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShippingRateViewModel.swift; sourceTree = "<group>"; };
@@ -232,8 +234,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C4D74EB251376E4001F4300 /* Intempt.framework in Frameworks */,
-				0C08735E25166C0D00D2FC77 /* Pay.framework in Frameworks */,
-				0C08736125166C1C00D2FC77 /* Buy.framework in Frameworks */,
+				0C9E551F261744850041022A /* AppTrackingTransparency.framework in Frameworks */,
+				0CE66FB625C94A2E00E3AA64 /* Buy.framework in Frameworks */,
+				0CE66FB825C94A2E00E3AA64 /* Pay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,8 +354,9 @@
 		4A5D63C718B1046768CBAD73 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0C08736025166C1C00D2FC77 /* Buy.framework */,
-				0C08735D25166C0D00D2FC77 /* Pay.framework */,
+				0C9E551E261744850041022A /* AppTrackingTransparency.framework */,
+				0CE66FB425C94A2E00E3AA64 /* Buy.framework */,
+				0CE66FB525C94A2E00E3AA64 /* Pay.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -826,16 +830,9 @@
 				DEVELOPMENT_TEAM = A3K7YHSW33;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/$(PROJECT_NAME)\\ Demo",
-					"$(PROJECT_DIR)/$(PROJECT_NAME)\\ Demo",
 					"$(PROJECT_DIR)/Shopify\\ Demo",
-					"$(PROJECT_DIR)/Shopify\\ Demo",
-					"$(PROJECT_DIR)/Shopify\\ Demo",
-					"$(PROJECT_DIR)/Shopify\\ Demo",
-					"$(PROJECT_DIR)/Shopify\\ Demo",
-					"$(PROJECT_DIR)/Shopify\\ Demo",
-					"$(PROJECT_DIR)/Shopify\\ Demo",
-					"$(PROJECT_DIR)/Shopify\\ Demo",
+					"$(SRCROOT)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "Shopify Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -863,16 +860,9 @@
 				DEVELOPMENT_TEAM = A3K7YHSW33;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/$(PROJECT_NAME)\\ Demo",
-					"$(PROJECT_DIR)/$(PROJECT_NAME)\\ Demo",
 					"$(PROJECT_DIR)/Shopify\\ Demo",
-					"$(PROJECT_DIR)/Shopify\\ Demo",
-					"$(PROJECT_DIR)/Shopify\\ Demo",
-					"$(PROJECT_DIR)/Shopify\\ Demo",
-					"$(PROJECT_DIR)/Shopify\\ Demo",
-					"$(PROJECT_DIR)/Shopify\\ Demo",
-					"$(PROJECT_DIR)/Shopify\\ Demo",
-					"$(PROJECT_DIR)/Shopify\\ Demo",
+					"$(SRCROOT)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "Shopify Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

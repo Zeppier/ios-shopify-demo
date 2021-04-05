@@ -8,6 +8,7 @@
 
 import UIKit
 import Intempt
+import AppTrackingTransparency
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -15,13 +16,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        if(IntemptConfig.orgId == "Your Organization Id" || IntemptConfig.sourceId == "Your Source Id" || IntemptConfig.orgId == "Your Token") {
+        if(IntemptOptions.orgId == "Your Organization Id" || IntemptOptions.sourceId == "Your Source Id" || IntemptOptions.orgId == "Your Token") {
             print("Please configure your Intempt profile to proceed.")
             return
         }
-        IntemptTracker.tracking(withOrgId: IntemptConfig.orgId, andSourceId: IntemptConfig.sourceId, andToken: IntemptConfig.token)
+        requestTrackingPermission()
         
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let scene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: scene)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -53,5 +55,67 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 
+    private func requestTrackingPermission() {
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization { status in
+                switch status {
+                    case .authorized:
+                        // Tracking authorization dialog was shown
+                        // and we are authorized
+                        print("Tracking authorized.")
+                        
+                        UserDefaults.standard.set(true, forKey: "TrackingEnabled")
+                        // Now that we are authorized we can get the IDFA
+                        DispatchQueue.main.async {
+                            self.decideInitialViewController()
+                            self.initializeIntemptTracking()
+                        }
+                    case .denied:
+                        // Tracking authorization dialog was
+                        // shown and permission is denied
+                        print("Denied. Please turn on app tracking to enable app analytics.")
+                        UserDefaults.standard.set(false, forKey: "TrackingEnabled")
+                    case .notDetermined:
+                        // Tracking authorization dialog has not been shown
+                        print("Not determined.")
+                    case .restricted:
+                        print("Restricted. Please turn on app tracking to enable app analytics.")
+                        UserDefaults.standard.set(false, forKey: "TrackingEnabled")
+                    @unknown default:
+                        print("Unknown.")
+                }
+            }
+        }
+        else {
+            decideInitialViewController()
+            initializeIntemptTracking()
+        }
+    }
+    
+    private func initializeIntemptTracking() {
+        //Initialize Intempt SDK
+        let intemptConfig = IntemptConfig(queueEnabled: true, withItemsInQueue: 0, withTimeBuffer: 7, withInitialDelay: 0.3, withInputTextCaptureDisabled: false)
+        IntemptTracker.tracking(withOrgId: IntemptOptions.orgId, withSourceId: IntemptOptions.sourceId, withToken: IntemptOptions.token, withConfig: intemptConfig) { (status, result, error) in
+            if(status) {
+                if let dictResult = result as? [String: Any] {
+                    print(dictResult)
+                }
+            }
+            else {
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
+        }
+        IntemptClient.enableLogging()
+    }
+    
+    func decideInitialViewController() {
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController")
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.isNavigationBarHidden = true
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+    }
 }
 
