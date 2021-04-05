@@ -10,7 +10,9 @@
 @import CoreLocation;
 @import CoreBluetooth;
 
-typedef void(^CompletionHandler)(BOOL status, NSError *error);
+#import <Intempt/IntemptConfig.h>
+
+typedef void(^CompletionHandler)(BOOL status, id result, NSError *error);
 
 @protocol intemptDelegate <NSObject>
 /**
@@ -32,13 +34,17 @@ typedef void(^CompletionHandler)(BOOL status, NSError *error);
 @property (weak, nonatomic) id<intemptDelegate> delegate;
 @property (strong, nonatomic) CLLocation *currentLocation;
 
+/** An Intempt configuartion which can be configured by user. For more details please look into `IntemptConfig` class.
+ */
+@property(strong, nonatomic) IntemptConfig *config;
+
 /**
  Retuns a fully initialzed `IntemptClient` object
  @param organizationId Organization Id
  @param trackerId  Tracker Id
  @param token Source token
 */
-+ (IntemptClient *)sharedClientWithOrganizationId:(NSString *)organizationId andTrackerId:(NSString *)trackerId andToken:(NSString *)token;
++ (IntemptClient *)sharedClientWithOrganizationId:(NSString *)organizationId withTrackerId:(NSString *)trackerId withToken:(NSString *)token withConfig:(id)settings withCompletion:(CompletionHandler)handler;
 
 /**
  Retuns a fully initialzed `IntemptClient` object
@@ -60,12 +66,12 @@ typedef void(^CompletionHandler)(BOOL status, NSError *error);
 
 
 /**
- Call this to disable debug logging. It's disabled by default.
+ Call this to disable debug logging.
  */
 + (void)disableLogging;
 
 /**
- Call this to enable debug logging.
+ Call this to enable debug logging. By default it's disabled.
  */
 + (void)enableLogging;
 
@@ -75,7 +81,6 @@ typedef void(^CompletionHandler)(BOOL status, NSError *error);
  @return true if logging is enabled, false if disabled.
  */
 + (Boolean)isLoggingEnabled;
-
 /**
  Call this if your code needs to use more than one Intempt project.  By convention, if you
  call this, you're responsible for releasing the returned instance once you're finished with it.
@@ -87,7 +92,7 @@ typedef void(^CompletionHandler)(BOOL status, NSError *error);
  @param token Your Intempt Tracker security token.
  @return An initialized instance of ITClient.
  */
-- (id)initWithOrganizationId:(NSString *)organizationId andTrackerId:(NSString *)trackerId andToken:(NSString *)token;
+- (id)initWithOrganizationId:(NSString *)organizationId withTrackerId:(NSString *)trackerId withToken:(NSString *)token withConfig:(id)settings withCompletion:(CompletionHandler)handler;
 
 /**
  Call this if your code needs to use more than one Intempt project along with some extra properties & properties overrides. By convention, if you
@@ -99,7 +104,7 @@ typedef void(^CompletionHandler)(BOOL status, NSError *error);
  @param propertiesOverridesBlock A completion block
  @return An initialized instance of ITClient.
  */
--(id)initWithOrganizationId:(NSString *)organizationId andTrackerId:(NSString *)sourceId andToken:(NSString *)token andPropertiesOverrides:(NSDictionary *)propertiesOverrides andPropertiesOverridesBlock:(NSDictionary *(^)(NSString *))propertiesOverridesBlock;
+-(id)initWithOrganizationId:(NSString *)organizationId withTrackerId:(NSString *)sourceId withToken:(NSString *)token withConfig:(id)settings withPropertiesOverrides:(NSDictionary *)propertiesOverrides withPropertiesOverridesBlock:(NSDictionary *(^)(NSString *))propertiesOverridesBlock withCompletion:(CompletionHandler)handler;
 
 /**
 Use this Instance method when you want to add a specific event
@@ -129,7 +134,7 @@ Use this Instance method to initilaze the beacon for the app.
 @param trackerId Your Intempt Source ID.
 @param token Your Intempt Security Token.
 */
-- (void)withOrgId:(NSString*)orgId andSourceId:(NSString*)trackerId andToken:(NSString*)token uuidString:(NSString*)uuid;
+- (void)withOrgId:(NSString*)orgId andSourceId:(NSString*)trackerId andToken:(NSString*)token uuidString:(NSString*)uuid withCompletion:(CompletionHandler)handler;
 
 
 /**
@@ -156,6 +161,7 @@ Get Intempt Visitor ID
  */
 + (NSString *)sdkVersion;
 
+@property (nonatomic, copy) CompletionHandler completion;
 
 // defines the TBLog macro
 #define INTEMPT_LOGGING_ENABLED [IntemptClient loggingEnabled]

@@ -25,8 +25,31 @@ class ProductsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
+        //status, result, error
+        /*IntemptTracker.beacon(withOrgId: BeaconConfig.orgId, andSourceId: BeaconConfig.sourceId, andToken: BeaconConfig.token, andDeviceUUID: BeaconConfig.uuid) { (status, result, error) in
+            if(status) {
+                NSLog("Beacon Initalization successful.")
+                if let dictResult = result as? [String: Any] {
+                    print(dictResult)
+                }
+            }
+            else {
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
+        }*/
         
-        IntemptTracker.beacon(withOrgId: BeaconConfig.orgId, andSourceId: BeaconConfig.sourceId, andToken: BeaconConfig.token, andDeviceUUID:BeaconConfig.uuid)
+        IntemptTracker.beacon(withOrgId: BeaconConfig.orgId, andSourceId: BeaconConfig.sourceId, andToken: BeaconConfig.token, andDeviceUUID: BeaconConfig.uuid) { (status, result, error) in
+            if(status) {
+                NSLog("identify successful")
+            }
+            else {
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
+        }
         IntemptClient.shared()?.delegate = self
 
         self.configureCollectionView()

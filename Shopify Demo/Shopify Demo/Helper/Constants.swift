@@ -25,10 +25,10 @@ struct API {
     static let baseURL = environment.rawValue
     
     //Endpoints
-    static let segment = IntemptConfig.orgId + "/segmentations/latest"
+    static let segment = IntemptOptions.orgId + "/segmentations/latest"
 }
 
-struct IntemptConfig {
+struct IntemptOptions {
     //Please go to https://app.intempt.com/home and obtain Intempt credentials
     
     static let orgId = "playground" // Example: intempt-hotel-demo
