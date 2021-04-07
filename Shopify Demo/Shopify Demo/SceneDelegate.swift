@@ -113,7 +113,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func decideInitialViewController() {
         let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController")
         let navigationController = UINavigationController(rootViewController: viewController)
-        navigationController.isNavigationBarHidden = true
+        navigationController.isNavigationBarHidden = false
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }

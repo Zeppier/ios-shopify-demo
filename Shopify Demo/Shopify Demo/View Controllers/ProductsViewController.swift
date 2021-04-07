@@ -42,7 +42,7 @@ class ProductsViewController: UIViewController {
         
         IntemptTracker.beacon(withOrgId: BeaconConfig.orgId, andSourceId: BeaconConfig.sourceId, andToken: BeaconConfig.token, andDeviceUUID: BeaconConfig.uuid) { (status, result, error) in
             if(status) {
-                NSLog("identify successful")
+                NSLog("beacon initialization successful")
             }
             else {
                 if let error = error {

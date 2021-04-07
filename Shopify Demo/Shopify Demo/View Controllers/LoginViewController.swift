@@ -48,22 +48,12 @@ extension LoginViewController {
     }
     
     @IBAction private func loginAction(_ sender: UIButton) {
-        /*IntemptTracker.identify(email, withProperties: nil) { (status, result, error) in
+        IntemptTracker.identify(email, withProperties: nil) { (status, result, error) in
             if(status) {
-                NSLog("identify successful")
+                NSLog("Identify successful")
                 if let dictResult = result as? [String: Any] {
                     print(dictResult)
                 }
-            }
-            else {
-                if let error = error {
-                    print(error.localizedDescription)
-                }
-            }
-        }*/
-        IntemptTracker.identify(email, withProperties: nil) { (status, result, error) in
-            if(status) {
-                NSLog("identify successful")
             }
             else {
                 if let error = error {
