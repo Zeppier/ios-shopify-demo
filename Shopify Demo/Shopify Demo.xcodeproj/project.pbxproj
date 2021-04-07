@@ -846,6 +846,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = ShopifyDemo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -876,6 +877,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = ShopifyDemo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};

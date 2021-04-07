@@ -102,23 +102,15 @@ extension ProductDetailsViewController: ProductHeaderDelegate {
         let price = self.product.variants.items.first?.price
         dictProductBuy.setValue(price, forKey: "amount")
         dictProductBuy.setValue(true, forKey: "successfulTransaction")
-         
         arrProductBuy.add(dictProductBuy)
         print("Product added to carts: \(arrProductBuy)")
-        /*IntemptTracker.track("Purchase", withProperties: arrProductBuy as? [Any]) { (status, result, error) in
+        
+        IntemptTracker.track("Purchase", withProperties: arrProductBuy as? [Any]) { (status, result, error) in
             if(status) {
+                print("Purchase successful.")
                 if let dictResult = result as? [String: Any] {
                     print(dictResult)
                 }
-            }
-            else {
-                if let error = error {
-                    print(error.localizedDescription)
-                }
-            }
-        }*/
-        IntemptTracker.track("Purchase", withProperties: arrProductBuy as? [Any]) { (status, result, error) in
-            if(status) {
             }
             else {
                 if let error = error {
