@@ -35,7 +35,7 @@
 	<key>NSLocationWhenInUseUsageDescription - 2</key>
 	<string>Always</string>
 	<key>NSUserTrackingUsageDescription</key>
-	<string>Always</string>
+	<string>Tracking permission is needed to for analytics</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
