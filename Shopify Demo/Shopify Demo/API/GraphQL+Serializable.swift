@@ -1,6 +1,6 @@
 
 
-import Buy
+import MobileBuySDK
 
 extension GraphQL.AbstractResponse: Serializable {
     

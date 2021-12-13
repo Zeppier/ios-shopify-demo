@@ -1,12 +1,12 @@
 
 
-import Buy
+import MobileBuySDK
 
 protocol DiscountApplication {
     var name: String { get }
 }
 
-extension Buy.DiscountApplication {
+extension MobileBuySDK.DiscountApplication {
     
     var resolvedViewModel: DiscountApplication {
         switch self {
@@ -22,7 +22,7 @@ extension Buy.DiscountApplication {
     }
 }
 
-extension Array where Element == Buy.DiscountApplication {
+extension Array where Element == MobileBuySDK.DiscountApplication {
     
     var viewModels: [DiscountApplication] {
         return self.map { $0.resolvedViewModel }

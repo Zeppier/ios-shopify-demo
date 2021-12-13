@@ -1,6 +1,6 @@
 
-import Buy
-import Pay
+import MobileBuySDK
+//import Pay
 extension CheckoutViewModel {
 
     var payCheckout: PayCheckout {
@@ -18,6 +18,7 @@ extension CheckoutViewModel {
             shippingAddress:  self.shippingAddress?.payAddress,
             shippingRate:     self.shippingRate?.payShippingRate,
             currencyCode:     self.currencyCode,
+            totalDuties: 0,
             subtotalPrice:    self.subtotalPrice,
             needsShipping:    self.requiresShipping,
             totalTax:         self.totalTax,

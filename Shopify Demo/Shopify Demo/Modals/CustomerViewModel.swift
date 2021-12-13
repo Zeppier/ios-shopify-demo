@@ -1,7 +1,7 @@
 
 
 import Foundation
-import Buy
+import MobileBuySDK
 final class CustomerViewModel: ViewModel {
     
     typealias ModelType = Storefront.Customer

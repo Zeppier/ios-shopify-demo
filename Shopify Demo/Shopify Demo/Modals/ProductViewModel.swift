@@ -1,7 +1,7 @@
 
 
 import Foundation
-import Buy
+import MobileBuySDK
 final class ProductViewModel: ViewModel {
     
     typealias ModelType = Storefront.ProductEdge
@@ -11,7 +11,7 @@ final class ProductViewModel: ViewModel {
     
     let id:       String
     let title:    String
-    let summary:  String
+    var summary:  String
     let price:    String
     let images:   PageableArray<ImageViewModel>
     let variants: PageableArray<VariantViewModel>

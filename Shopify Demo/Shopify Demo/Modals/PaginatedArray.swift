@@ -1,6 +1,6 @@
 
 
-import Buy
+import MobileBuySDK
 struct PageableArray<T: ViewModel> {
     
     private(set) var items: [T]

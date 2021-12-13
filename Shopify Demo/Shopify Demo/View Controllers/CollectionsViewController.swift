@@ -1,10 +1,19 @@
 
 
 import UIKit
-import Buy
+import MobileBuySDK
 import Intempt
 
-class CollectionsViewController: UIViewController {
+class CollectionsViewController: UIViewController, LoginControllerDelegate {
+    func loginControllerDidCancel(_ loginController: LoginViewController) {
+        
+    }
+    func loginController(_ loginController: LoginViewController, didLoginWith email: String, passowrd: String) {
+        if UserSession.getUser() != nil{
+            self.navigationItem.leftBarButtonItem?.title = "Logout"
+        }
+    }
+    
   
     @IBOutlet weak var tableView: StorefrontTableView!
     @IBOutlet weak var bannerImage: UIImageView!
@@ -36,7 +45,6 @@ class CollectionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         if(IntemptOptions.orgId == "Your Organization Id" || IntemptOptions.sourceId == "Your Source Id" || IntemptOptions.orgId == "Your Token") {
             //assertionFailure("Please configure your Intempt profile to proceed.")
             print("Please configure your Intempt profile to proceed.")
@@ -57,6 +65,12 @@ class CollectionsViewController: UIViewController {
         self.scrolView.contentSize = CGSize (width: self.scrolView.frame.size.width, height: self.footerView.frame.origin.y + self.footerView.frame.size.height+130)
         self.configureTableView()
         self.navigationItem.setHidesBackButton(true, animated: true);
+        
+        APP_DELEGATE.delay(15){
+            LocationsManager.sharedInstance.startGtettingLocation()
+        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateUserDetails), name: NSNotification.Name(rawValue: "updateUserDetails"), object: nil)
     }
     
     private func configureTableView() {
@@ -69,9 +83,36 @@ class CollectionsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.setHidesBackButton(true, animated: true);
+
+        self.updateUserDetails()
     }
     
-
+    @objc func updateUserDetails(){
+        if UserSession.getUser() != nil{
+            self.navigationItem.leftBarButtonItem?.title = "Logout"
+        }
+    }
+    
+    @IBAction func loginPressed() {
+    
+        if UserSession.getUser() != nil{
+            let alert = UIAlertController(title: "Logout?", message: "Are you sure you want to logout?", preferredStyle: UIAlertController.Style.alert)
+            
+            let yesAction = UIAlertAction(title: "Yes", style: .destructive) { action in
+                UserSession.logoutUser()
+                self.navigationItem.leftBarButtonItem?.title = "Login"
+            }
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+            alert.addAction(cancelAction)
+            alert.addAction(yesAction)
+            self.present(alert, animated: true, completion: nil)
+        }else{
+            let coordinator: LoginViewController = self.storyboard!.instantiateViewController()
+            coordinator.delegate = self
+            self.present(coordinator, animated: true, completion: nil)
+        }
+    }
     //  MARK: - Fetching products -
     
     fileprivate func fetchCollections(after cursor: String? = nil) {
@@ -85,7 +126,6 @@ class CollectionsViewController: UIViewController {
                     self.blurView.isHidden = false
                 }
                 //print("data---\(collections.items)")
-
 
                 self.collections = collections
                 self.tableView.dataSource = self
@@ -134,7 +174,8 @@ class CollectionsViewController: UIViewController {
                         }
                     }
                     catch let err {
-                        showAlert(title: AppTitle, message: err.localizedDescription, vc: self)
+                        //showAlert(title: AppTitle, message: err.localizedDescription, vc: self)
+                        print("fetchSegmentWith=", err.localizedDescription)
                     }
                     self.clickAction(self)
                     self.fetchCollections()
@@ -159,8 +200,10 @@ class CollectionsViewController: UIViewController {
 extension CollectionsViewController {
     
     @IBAction private func accountAction(_ sender: UIBarButtonItem) {
-        let coordinator: CustomerCoordinator = self.storyboard!.instantiateViewController()
-        self.present(coordinator, animated: true, completion: nil)
+       
+            let coordinator: CustomerCoordinator = self.storyboard!.instantiateViewController()
+            self.present(coordinator, animated: true, completion: nil)
+        
     }
     
     @IBAction private func cartAction(_ sender: Any) {

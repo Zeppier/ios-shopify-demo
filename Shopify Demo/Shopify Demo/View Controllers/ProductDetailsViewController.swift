@@ -48,6 +48,30 @@ class ProductDetailsViewController: ParallaxViewController {
         
         self.configureHeader()
         self.configureImageController()
+        
+        let arrProductBuy = NSMutableArray()
+        let dictProductBuy = NSMutableDictionary()
+        dictProductBuy.setValue(self.product.title, forKey: "productName")
+        let price = self.product.variants.items.first?.price
+        dictProductBuy.setValue(price, forKey: "amount")
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dictProductBuy.setValue(dateFormatter.string(from:Date()), forKey: "date");
+        arrProductBuy.add(dictProductBuy)
+        
+        IntemptTracker.track("product_detail_viewed", withProperties: arrProductBuy as? [Any]) { (status, result, error) in
+            if(status) {
+                print("product_detail_viewed")
+                if let dictResult = result as? [String: Any] {
+                    print(dictResult)
+                }
+            }
+            else {
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
     
     private func registerTableCells() {
@@ -105,7 +129,7 @@ extension ProductDetailsViewController: ProductHeaderDelegate {
         arrProductBuy.add(dictProductBuy)
         print("Product added to carts: \(arrProductBuy)")
         
-        IntemptTracker.track("Purchase", withProperties: arrProductBuy as? [Any]) { (status, result, error) in
+        IntemptTracker.track("purchase", withProperties: arrProductBuy as? [Any]) { (status, result, error) in
             if(status) {
                 print("Purchase successful.")
                 if let dictResult = result as? [String: Any] {
@@ -133,6 +157,10 @@ extension ProductDetailsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
+        self.product.summary = self.product.summary.replacingOccurrences(of: "This is a demonstration store.", with: "")
+        self.product.summary = self.product.summary.replacingOccurrences(of: "You can purchase products like this from Baby & Company", with: "")
+        
         switch CellKind(rawValue: indexPath.row)! {
         case .header:
             let cell = tableView.deque(ProductHeaderCell.self, configureFrom: self.product, at: indexPath)
