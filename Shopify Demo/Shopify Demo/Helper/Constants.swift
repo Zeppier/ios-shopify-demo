@@ -13,6 +13,7 @@ let AppTitle = Bundle.main.object(forInfoDictionaryKey:"CFBundleName") as! Strin
 let stroryboard = UIStoryboard(name: "Main", bundle: nil)
 let appDel = UIApplication.shared.delegate as! AppDelegate
 let flagKey = "retail-ecommerce-demo-1-category-affinity-dresses-ios"
+let APP_DELEGATE: AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
 enum Environment: String {
     case staging = "https://api.staging.intempt.com/v1/"
@@ -29,23 +30,23 @@ struct API {
 }
 
 struct IntemptOptions {
-    //Please go to https://app.intempt.com/home and obtain Intempt credentials
-    
-    static let orgId = "playground" // Example: intempt-hotel-demo
-    static let sourceId = "137340365627670528" //Example: 1111111111111111
-    static let token = "ST-JuK8lbjIMD_NDdj0ibYVtLM0tGKyo.cyptoYSlnwCm-LXNiTcAdT_gt5z82fE59EZ8antlMm1L835BvMPiAwwS8hYtch1U" //Example: jAxLS9GWwxGHbJWQAMIDG3tWvDP53e4
+    ///Please go to https://app.intempt.com/home and obtain Intempt credentials
+    ///Source = Shopify Demp app
+    static let orgId = "test-organization-x1"
+    static let sourceId = "302664524644634624"
+    static let token = "LpJSBrZTGUd125TsHKCbQ_LdNNqcQamg.Qy2xNGiw_4i9wgzNTl7s2kqlaJbgbIh-aPeFJeqPopVKEEz-F-18fNh3wKI4D8Ig"
 }
 
-// This is optional. If you use beacon fetaures then only you should use this
+/// This is optional. If you use beacon fetaures then only you should use this
 struct BeaconConfig {
-//Please go to https://app.intempt.com/home create an beacon app and obtain Intempt credentials
+///Please go to https://app.intempt.com/home create an beacon app and obtain Intempt credentials
 
-    static let orgId = "playground"
-    static let sourceId = "137253757784113152"
-    static let token = "Ik2awm7NSaQrtp1PEm77V7bpxUnvwVzK.1YUZHo5e4jnGtZPO3wI0zUJySAG9rdgwNjX-U1uOT62G5lAeq_05li1DPhfOkDpu"
+    ///Source = Shopify Demp app
+    static let orgId = "test-organization-x1"
+    static let sourceId = "302664524644634624"
+    static let token = "LpJSBrZTGUd125TsHKCbQ_LdNNqcQamg.Qy2xNGiw_4i9wgzNTl7s2kqlaJbgbIh-aPeFJeqPopVKEEz-F-18fNh3wKI4D8Ig"
     static let uuid = "f2789bb4-39e3-46bd-98f0-4c1212d13c87" //Example: f2789bb4-39e3-46bd-98f0-4c1212d13c87
 }
-
 
 struct Shopify {
     //Please go to https://shopify.dev/tools/libraries/storefront-api/ios and obtain credentials

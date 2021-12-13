@@ -1,7 +1,7 @@
 
 
 import Foundation
-import Buy
+import MobileBuySDK
 final class ImageViewModel: ViewModel {
     
     typealias ModelType = Storefront.ImageEdge

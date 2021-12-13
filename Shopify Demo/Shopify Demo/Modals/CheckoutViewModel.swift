@@ -1,7 +1,7 @@
 
 
 import Foundation
-import Buy
+import MobileBuySDK
 final class CheckoutViewModel: ViewModel {
     
     typealias ModelType = Storefront.Checkout

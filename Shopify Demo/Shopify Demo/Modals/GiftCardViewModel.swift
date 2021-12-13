@@ -1,7 +1,7 @@
 
 
 import Foundation
-import Buy
+import MobileBuySDK
 final class GiftCardViewModel: ViewModel {
     
     typealias ModelType = Storefront.AppliedGiftCard

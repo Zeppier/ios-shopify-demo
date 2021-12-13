@@ -1,8 +1,8 @@
 
 
 import UIKit
-import Buy
-import Pay
+import MobileBuySDK
+//import Pay
 import SafariServices
 
 class CartViewController: ParallaxViewController {

@@ -1,4 +1,4 @@
-import Buy
+import MobileBuySDK
 extension Storefront.ImageConnectionQuery {
     
     @discardableResult

@@ -3,18 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0C3542B424FFC1270023C271 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3542B324FFC1270023C271 /* Constants.swift */; };
-		0C4D74EB251376E4001F4300 /* Intempt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4D74E9251376DF001F4300 /* Intempt.framework */; };
-		0C4D74EC251376E4001F4300 /* Intempt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4D74E9251376DF001F4300 /* Intempt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0C9E551F261744850041022A /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9E551E261744850041022A /* AppTrackingTransparency.framework */; };
-		0CE66FB625C94A2E00E3AA64 /* Buy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE66FB425C94A2E00E3AA64 /* Buy.framework */; };
-		0CE66FB725C94A2E00E3AA64 /* Buy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE66FB425C94A2E00E3AA64 /* Buy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0CE66FB825C94A2E00E3AA64 /* Pay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE66FB525C94A2E00E3AA64 /* Pay.framework */; };
-		0CE66FB925C94A2E00E3AA64 /* Pay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE66FB525C94A2E00E3AA64 /* Pay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0CFCC08F25162C84009CBE9D /* ShippingRateViewModel+PayShippingRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFCC07825162C84009CBE9D /* ShippingRateViewModel+PayShippingRate.swift */; };
 		0CFCC09025162C84009CBE9D /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFCC07925162C84009CBE9D /* PaymentViewModel.swift */; };
 		0CFCC09125162C84009CBE9D /* ShippingRateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFCC07A25162C84009CBE9D /* ShippingRateViewModel.swift */; };
@@ -50,6 +43,7 @@
 		0CFCC0BD25162DDD009CBE9D /* ClientQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFCC0B125162DDD009CBE9D /* ClientQuery.swift */; };
 		0CFCC0BE25162DDD009CBE9D /* GraphQL+Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFCC0B225162DDD009CBE9D /* GraphQL+Serializable.swift */; };
 		0CFCC0BF25162DDD009CBE9D /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFCC0B325162DDD009CBE9D /* Client.swift */; };
+		29B95608A7517AD3B411E7A3 /* Pods_Shopify_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5571943093FFD4B4D4171C30 /* Pods_Shopify_Demo.framework */; };
 		ED6C22AC24FE3D9700F4F740 /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C22AB24FE3D9700F4F740 /* PushManager.swift */; };
 		EDFADEBF24FA2E2A0076A1FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFADEBE24FA2E2A0076A1FE /* SceneDelegate.swift */; };
 		EDFADEC624FA2E2C0076A1FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDFADEC524FA2E2C0076A1FE /* Assets.xcassets */; };
@@ -107,18 +101,38 @@
 		EDFADF8724FA32540076A1FE /* ProductDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDFADF7B24FA32530076A1FE /* ProductDetailsCell.xib */; };
 		EDFADF8824FA32540076A1FE /* CartNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFADF7C24FA32530076A1FE /* CartNavigationController.swift */; };
 		EDFADF8A24FA32B40076A1FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDFADF8924FA32B40076A1FE /* Main.storyboard */; };
+		FAA89FA5274E1E57002C4634 /* LocationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA89FA4274E1E57002C4634 /* LocationsManager.swift */; };
+		FABA775D2767623D007530C2 /* DeliveryAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA775C2767623C007530C2 /* DeliveryAddressViewController.swift */; };
+		FABA777427676D21007530C2 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA776127676D20007530C2 /* IQTextView.swift */; };
+		FABA777527676D21007530C2 /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA776327676D20007530C2 /* IQPreviousNextView.swift */; };
+		FABA777627676D21007530C2 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA776427676D20007530C2 /* IQTitleBarButtonItem.swift */; };
+		FABA777727676D21007530C2 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA776527676D20007530C2 /* IQBarButtonItem.swift */; };
+		FABA777827676D21007530C2 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA776627676D20007530C2 /* IQToolbar.swift */; };
+		FABA777927676D21007530C2 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA776727676D20007530C2 /* IQUIView+IQKeyboardToolbar.swift */; };
+		FABA777A27676D21007530C2 /* IQInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA776827676D21007530C2 /* IQInvocation.swift */; };
+		FABA777B27676D21007530C2 /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA776A27676D21007530C2 /* IQKeyboardManagerConstantsInternal.swift */; };
+		FABA777C27676D21007530C2 /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA776B27676D21007530C2 /* IQKeyboardManagerConstants.swift */; };
+		FABA777D27676D21007530C2 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA776C27676D21007530C2 /* IQKeyboardReturnKeyHandler.swift */; };
+		FABA777E27676D21007530C2 /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA776D27676D21007530C2 /* IQKeyboardManager.swift */; };
+		FABA777F27676D21007530C2 /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA776F27676D21007530C2 /* IQUIScrollView+Additions.swift */; };
+		FABA778027676D21007530C2 /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA777027676D21007530C2 /* IQUIViewController+Additions.swift */; };
+		FABA778127676D21007530C2 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA777127676D21007530C2 /* IQUITextFieldView+Additions.swift */; };
+		FABA778227676D21007530C2 /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA777227676D21007530C2 /* IQUIView+Hierarchy.swift */; };
+		FABA778327676D21007530C2 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA777327676D21007530C2 /* IQNSArray+Sort.swift */; };
+		FABA77852767861E007530C2 /* Intempt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABA77842767861E007530C2 /* Intempt.xcframework */; };
+		FABA77862767863E007530C2 /* Intempt.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FABA77842767861E007530C2 /* Intempt.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAEDC2F02756413E00881BFE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDC2EF2756413E00881BFE /* UserModel.swift */; };
+		FAEDC2F22756458F00881BFE /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDC2F12756458F00881BFE /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0CD40F632508CE84005A6F12 /* Embed Frameworks */ = {
+		1A83FE88274EAC0600220C6C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0C4D74EC251376E4001F4300 /* Intempt.framework in Embed Frameworks */,
-				0CE66FB725C94A2E00E3AA64 /* Buy.framework in Embed Frameworks */,
-				0CE66FB925C94A2E00E3AA64 /* Pay.framework in Embed Frameworks */,
+				FABA77862767863E007530C2 /* Intempt.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,10 +142,6 @@
 /* Begin PBXFileReference section */
 		0C3542B324FFC1270023C271 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0C4D74E825137590001F4300 /* Retail Sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Retail Sample.entitlements"; sourceTree = "<group>"; };
-		0C4D74E9251376DF001F4300 /* Intempt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Intempt.framework; sourceTree = "<group>"; };
-		0C9E551E261744850041022A /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
-		0CE66FB425C94A2E00E3AA64 /* Buy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Buy.framework; path = Carthage/Build/iOS/Buy.framework; sourceTree = "<group>"; };
-		0CE66FB525C94A2E00E3AA64 /* Pay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pay.framework; path = Carthage/Build/iOS/Pay.framework; sourceTree = "<group>"; };
 		0CFCC07825162C84009CBE9D /* ShippingRateViewModel+PayShippingRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShippingRateViewModel+PayShippingRate.swift"; sourceTree = "<group>"; };
 		0CFCC07925162C84009CBE9D /* PaymentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
 		0CFCC07A25162C84009CBE9D /* ShippingRateViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShippingRateViewModel.swift; sourceTree = "<group>"; };
@@ -167,6 +177,9 @@
 		0CFCC0B125162DDD009CBE9D /* ClientQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientQuery.swift; sourceTree = "<group>"; };
 		0CFCC0B225162DDD009CBE9D /* GraphQL+Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GraphQL+Serializable.swift"; sourceTree = "<group>"; };
 		0CFCC0B325162DDD009CBE9D /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		5571943093FFD4B4D4171C30 /* Pods_Shopify_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shopify_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C5867C8033B88F03D7200E8 /* Pods-Shopify Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopify Demo.release.xcconfig"; path = "Target Support Files/Pods-Shopify Demo/Pods-Shopify Demo.release.xcconfig"; sourceTree = "<group>"; };
+		EBF1512F5341222D2DB47011 /* Pods-Shopify Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopify Demo.debug.xcconfig"; path = "Target Support Files/Pods-Shopify Demo/Pods-Shopify Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		ED6C22AB24FE3D9700F4F740 /* PushManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushManager.swift; sourceTree = "<group>"; };
 		EDFADEB924FA2E2A0076A1FE /* Retail Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Retail Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFADEBE24FA2E2A0076A1FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -226,6 +239,27 @@
 		EDFADF7B24FA32530076A1FE /* ProductDetailsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailsCell.xib; sourceTree = "<group>"; };
 		EDFADF7C24FA32530076A1FE /* CartNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartNavigationController.swift; sourceTree = "<group>"; };
 		EDFADF8924FA32B40076A1FE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FAA89FA4274E1E57002C4634 /* LocationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsManager.swift; sourceTree = "<group>"; };
+		FABA775C2767623C007530C2 /* DeliveryAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressViewController.swift; sourceTree = "<group>"; };
+		FABA776127676D20007530C2 /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
+		FABA776327676D20007530C2 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
+		FABA776427676D20007530C2 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
+		FABA776527676D20007530C2 /* IQBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQBarButtonItem.swift; sourceTree = "<group>"; };
+		FABA776627676D20007530C2 /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
+		FABA776727676D20007530C2 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
+		FABA776827676D21007530C2 /* IQInvocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQInvocation.swift; sourceTree = "<group>"; };
+		FABA776A27676D21007530C2 /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
+		FABA776B27676D21007530C2 /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
+		FABA776C27676D21007530C2 /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
+		FABA776D27676D21007530C2 /* IQKeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManager.swift; sourceTree = "<group>"; };
+		FABA776F27676D21007530C2 /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
+		FABA777027676D21007530C2 /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
+		FABA777127676D21007530C2 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
+		FABA777227676D21007530C2 /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
+		FABA777327676D21007530C2 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
+		FABA77842767861E007530C2 /* Intempt.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Intempt.xcframework; sourceTree = "<group>"; };
+		FAEDC2EF2756413E00881BFE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		FAEDC2F12756458F00881BFE /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,10 +267,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C4D74EB251376E4001F4300 /* Intempt.framework in Frameworks */,
-				0C9E551F261744850041022A /* AppTrackingTransparency.framework in Frameworks */,
-				0CE66FB625C94A2E00E3AA64 /* Buy.framework in Frameworks */,
-				0CE66FB825C94A2E00E3AA64 /* Pay.framework in Frameworks */,
+				29B95608A7517AD3B411E7A3 /* Pods_Shopify_Demo.framework in Frameworks */,
+				FABA77852767861E007530C2 /* Intempt.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +352,7 @@
 				0CFCC08C25162C84009CBE9D /* OrderViewModel.swift */,
 				0CFCC08D25162C84009CBE9D /* PaginatedArray.swift */,
 				0CFCC08E25162C84009CBE9D /* ProductViewModel.swift */,
+				FAEDC2EF2756413E00881BFE /* UserModel.swift */,
 			);
 			path = Modals;
 			sourceTree = "<group>";
@@ -354,19 +387,28 @@
 		4A5D63C718B1046768CBAD73 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0C9E551E261744850041022A /* AppTrackingTransparency.framework */,
-				0CE66FB425C94A2E00E3AA64 /* Buy.framework */,
-				0CE66FB525C94A2E00E3AA64 /* Pay.framework */,
+				5571943093FFD4B4D4171C30 /* Pods_Shopify_Demo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DEFC67818D2AB3F0B09482E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBF1512F5341222D2DB47011 /* Pods-Shopify Demo.debug.xcconfig */,
+				5C5867C8033B88F03D7200E8 /* Pods-Shopify Demo.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		EDFADEB024FA2E2A0076A1FE = {
 			isa = PBXGroup;
 			children = (
+				FABA77842767861E007530C2 /* Intempt.xcframework */,
 				EDFADEBB24FA2E2A0076A1FE /* Shopify Demo */,
 				EDFADEBA24FA2E2A0076A1FE /* Products */,
 				4A5D63C718B1046768CBAD73 /* Frameworks */,
+				DEFC67818D2AB3F0B09482E1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -384,7 +426,8 @@
 				0C4D74E825137590001F4300 /* Retail Sample.entitlements */,
 				EDFADED424FA2F270076A1FE /* AppDelegate.swift */,
 				EDFADEBE24FA2E2A0076A1FE /* SceneDelegate.swift */,
-				0C4D74E9251376DF001F4300 /* Intempt.framework */,
+				FABA775E27676D0F007530C2 /* Externals */,
+				FAA89FA3274E1E57002C4634 /* LocationManager */,
 				EDFADF5624FA31E40076A1FE /* View Controllers */,
 				EDFADF0624FA30E60076A1FE /* Cart */,
 				EDFADEFD24FA30BC0076A1FE /* Protocols */,
@@ -454,6 +497,7 @@
 				EDFADEF724FA30AE0076A1FE /* NSObject+Name.swift */,
 				EDFADEF324FA30AE0076A1FE /* Storyboard+ViewController.swift */,
 				EDFADEF624FA30AE0076A1FE /* String+HTML.swift */,
+				FAEDC2F12756458F00881BFE /* String+Extension.swift */,
 				EDFADEF424FA30AE0076A1FE /* UICollectionView+Touch.swift */,
 				EDFADEF524FA30AE0076A1FE /* UIImageView+Remote.swift */,
 			);
@@ -497,8 +541,80 @@
 				EDFADF6124FA322E0076A1FE /* CustomerCoordinator.swift */,
 				EDFADF6224FA322F0076A1FE /* CustomerViewController.swift */,
 				EDFADF6324FA322F0076A1FE /* ProfileViewController.swift */,
+				FABA775C2767623C007530C2 /* DeliveryAddressViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FAA89FA3274E1E57002C4634 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				FAA89FA4274E1E57002C4634 /* LocationsManager.swift */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		FABA775E27676D0F007530C2 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				FABA775F27676D20007530C2 /* IQKeyboardManagerSwift */,
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
+		FABA775F27676D20007530C2 /* IQKeyboardManagerSwift */ = {
+			isa = PBXGroup;
+			children = (
+				FABA776027676D20007530C2 /* IQTextView */,
+				FABA776227676D20007530C2 /* IQToolbar */,
+				FABA776927676D21007530C2 /* Constants */,
+				FABA776C27676D21007530C2 /* IQKeyboardReturnKeyHandler.swift */,
+				FABA776D27676D21007530C2 /* IQKeyboardManager.swift */,
+				FABA776E27676D21007530C2 /* Categories */,
+			);
+			path = IQKeyboardManagerSwift;
+			sourceTree = "<group>";
+		};
+		FABA776027676D20007530C2 /* IQTextView */ = {
+			isa = PBXGroup;
+			children = (
+				FABA776127676D20007530C2 /* IQTextView.swift */,
+			);
+			path = IQTextView;
+			sourceTree = "<group>";
+		};
+		FABA776227676D20007530C2 /* IQToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				FABA776327676D20007530C2 /* IQPreviousNextView.swift */,
+				FABA776427676D20007530C2 /* IQTitleBarButtonItem.swift */,
+				FABA776527676D20007530C2 /* IQBarButtonItem.swift */,
+				FABA776627676D20007530C2 /* IQToolbar.swift */,
+				FABA776727676D20007530C2 /* IQUIView+IQKeyboardToolbar.swift */,
+				FABA776827676D21007530C2 /* IQInvocation.swift */,
+			);
+			path = IQToolbar;
+			sourceTree = "<group>";
+		};
+		FABA776927676D21007530C2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FABA776A27676D21007530C2 /* IQKeyboardManagerConstantsInternal.swift */,
+				FABA776B27676D21007530C2 /* IQKeyboardManagerConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		FABA776E27676D21007530C2 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				FABA776F27676D21007530C2 /* IQUIScrollView+Additions.swift */,
+				FABA777027676D21007530C2 /* IQUIViewController+Additions.swift */,
+				FABA777127676D21007530C2 /* IQUITextFieldView+Additions.swift */,
+				FABA777227676D21007530C2 /* IQUIView+Hierarchy.swift */,
+				FABA777327676D21007530C2 /* IQNSArray+Sort.swift */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -508,11 +624,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDFADECD24FA2E2C0076A1FE /* Build configuration list for PBXNativeTarget "Shopify Demo" */;
 			buildPhases = (
+				D06ED235E891FB5B91F36FB6 /* [CP] Check Pods Manifest.lock */,
 				EDFADEB524FA2E2A0076A1FE /* Sources */,
 				EDFADEB624FA2E2A0076A1FE /* Frameworks */,
 				EDFADEB724FA2E2A0076A1FE /* Resources */,
-				0CD40F632508CE84005A6F12 /* Embed Frameworks */,
 				0CFCC076251628D1009CBE9D /* ShellScript */,
+				A20E55E3E48A26527311AC22 /* [CP] Embed Pods Frameworks */,
+				1A83FE88274EAC0600220C6C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -593,7 +711,47 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# skip if we run in debug\nif [ \"$CONFIGURATION\" == \"Debug\" ]; then\necho \"Skip frameworks cleaning in debug version\"\nexit 0\nfi\n\nAPP_PATH=\"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\ndo\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone\n";
+			shellScript = "
+";
+		};
+		A20E55E3E48A26527311AC22 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shopify Demo/Pods-Shopify Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shopify Demo/Pods-Shopify Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shopify Demo/Pods-Shopify Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D06ED235E891FB5B91F36FB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shopify Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -605,37 +763,53 @@
 				EDFADF0324FA30D70076A1FE /* Serializable.swift in Sources */,
 				0CFCC0BD25162DDD009CBE9D /* ClientQuery.swift in Sources */,
 				EDFADEF124FA30510076A1FE /* StorefrontCollectionView.swift in Sources */,
+				FABA778027676D21007530C2 /* IQUIViewController+Additions.swift in Sources */,
+				FABA777A27676D21007530C2 /* IQInvocation.swift in Sources */,
 				0CFCC09125162C84009CBE9D /* ShippingRateViewModel.swift in Sources */,
 				EDFADF8124FA32540076A1FE /* ProductDetailsViewController.swift in Sources */,
 				EDFADF6C24FA322F0076A1FE /* CollectionsViewController.swift in Sources */,
 				EDFADEFC24FA30AE0076A1FE /* NSObject+Name.swift in Sources */,
 				0CFCC09A25162C84009CBE9D /* ManualCodeViewModel.swift in Sources */,
+				FAEDC2F22756458F00881BFE /* String+Extension.swift in Sources */,
 				0CFCC0BF25162DDD009CBE9D /* Client.swift in Sources */,
+				FABA778227676D21007530C2 /* IQUIView+Hierarchy.swift in Sources */,
 				EDFADEFA24FA30AE0076A1FE /* UIImageView+Remote.swift in Sources */,
 				EDFADED824FA2F730076A1FE /* Currency.swift in Sources */,
+				FABA777C27676D21007530C2 /* IQKeyboardManagerConstants.swift in Sources */,
 				EDFADEF824FA30AE0076A1FE /* Storyboard+ViewController.swift in Sources */,
 				EDFADEE124FA2F9F0076A1FE /* SelectableCell.swift in Sources */,
 				EDFADF0B24FA30F90076A1FE /* CartItemViewModel.swift in Sources */,
 				EDFADED524FA2F270076A1FE /* AppDelegate.swift in Sources */,
 				EDFADF0C24FA30F90076A1FE /* CartController.swift in Sources */,
 				0CFCC0A525162C85009CBE9D /* ProductViewModel.swift in Sources */,
+				FABA777627676D21007530C2 /* IQTitleBarButtonItem.swift in Sources */,
 				0CFCC09B25162C85009CBE9D /* VariantViewModel.swift in Sources */,
 				0CFCC09D25162C85009CBE9D /* AddressViewModel.swift in Sources */,
 				0CFCC09025162C84009CBE9D /* PaymentViewModel.swift in Sources */,
 				EDFADF6A24FA322F0076A1FE /* ProductCell.swift in Sources */,
 				EDFADEE324FA2F9F0076A1FE /* ParallaxViewController.swift in Sources */,
+				FABA777D27676D21007530C2 /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				FABA777427676D21007530C2 /* IQTextView.swift in Sources */,
+				FAEDC2F02756413E00881BFE /* UserModel.swift in Sources */,
 				0CFCC0A425162C85009CBE9D /* PaginatedArray.swift in Sources */,
+				FAA89FA5274E1E57002C4634 /* LocationsManager.swift in Sources */,
 				0CFCC09525162C84009CBE9D /* ScriptCodeViewModel.swift in Sources */,
+				FABA777527676D21007530C2 /* IQPreviousNextView.swift in Sources */,
+				FABA777F27676D21007530C2 /* IQUIScrollView+Additions.swift in Sources */,
 				EDFADEF024FA30510076A1FE /* Paginating.swift in Sources */,
+				FABA777E27676D21007530C2 /* IQKeyboardManager.swift in Sources */,
+				FABA778327676D21007530C2 /* IQNSArray+Sort.swift in Sources */,
 				EDFADF0A24FA30F90076A1FE /* CartItem.swift in Sources */,
 				0CFCC09C25162C85009CBE9D /* DiscountAllocationViewModel.swift in Sources */,
 				EDFADEE224FA2F9F0076A1FE /* SeparatorView.swift in Sources */,
+				FABA777927676D21007530C2 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				EDFADF6B24FA322F0076A1FE /* OrderCell.swift in Sources */,
 				0CFCC0BA25162DDD009CBE9D /* Fragment+OrderConnectionQuery.swift in Sources */,
 				EDFADF8324FA32540076A1FE /* ProductsViewController.swift in Sources */,
 				EDFADF7E24FA32540076A1FE /* ProductHeaderCell.swift in Sources */,
 				EDFADF8824FA32540076A1FE /* CartNavigationController.swift in Sources */,
 				0CFCC0B425162DDD009CBE9D /* Fragment+VariantConnectionQuery.swift in Sources */,
+				FABA775D2767623D007530C2 /* DeliveryAddressViewController.swift in Sources */,
 				EDFADF7F24FA32540076A1FE /* WebViewController.swift in Sources */,
 				EDFADF8224FA32540076A1FE /* CartCell.swift in Sources */,
 				EDFADF0224FA30D70076A1FE /* ViewModel.swift in Sources */,
@@ -645,6 +819,8 @@
 				EDFADF6524FA322F0076A1FE /* CollectionCell.swift in Sources */,
 				EDFADEEA24FA2FC70076A1FE /* RoundedButton.swift in Sources */,
 				EDFADF7024FA322F0076A1FE /* ProfileViewController.swift in Sources */,
+				FABA777827676D21007530C2 /* IQToolbar.swift in Sources */,
+				FABA777B27676D21007530C2 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				EDFADEF924FA30AE0076A1FE /* UICollectionView+Touch.swift in Sources */,
 				0CFCC09825162C84009CBE9D /* GiftCardViewModel.swift in Sources */,
 				EDFADF6724FA322F0076A1FE /* AccountController.swift in Sources */,
@@ -676,9 +852,11 @@
 				EDFADF6D24FA322F0076A1FE /* LoginViewController.swift in Sources */,
 				0CFCC09925162C84009CBE9D /* ImageViewModel.swift in Sources */,
 				EDFADF8624FA32540076A1FE /* ProductDetailsCell.swift in Sources */,
+				FABA778127676D21007530C2 /* IQUITextFieldView+Additions.swift in Sources */,
 				EDFADF8524FA32540076A1FE /* TotalsViewController.swift in Sources */,
 				0CFCC09725162C84009CBE9D /* CreditCardViewModel.swift in Sources */,
 				0CFCC09325162C84009CBE9D /* DiscountCodeViewModel.swift in Sources */,
+				FABA777727676D21007530C2 /* IQBarButtonItem.swift in Sources */,
 				EDFADF0424FA30D70076A1FE /* ViewModelConfigurable.swift in Sources */,
 				0CFCC0B625162DDD009CBE9D /* Fragment+DiscountApplication.swift in Sources */,
 				0CFCC0A325162C85009CBE9D /* OrderViewModel.swift in Sources */,
@@ -821,18 +999,22 @@
 		};
 		EDFADECE24FA2E2C0076A1FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBF1512F5341222D2DB47011 /* Pods-Shopify Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Shopify Demo/Retail Sample.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Palash Das (578FNYJC7X)";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 9;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10.2.1;
 				DEVELOPMENT_TEAM = A3K7YHSW33;
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Shopify\\ Demo",
 					"$(SRCROOT)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Shopify Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -840,30 +1022,35 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = app.shopifydemo.com;
 				PRODUCT_NAME = "Retail Sample";
-				PROVISIONING_PROFILE_SPECIFIER = ShopifyDemo;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
 		EDFADECF24FA2E2C0076A1FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C5867C8033B88F03D7200E8 /* Pods-Shopify Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Shopify Demo/Retail Sample.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Palash Das (578FNYJC7X)";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 9;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10.2.1;
 				DEVELOPMENT_TEAM = A3K7YHSW33;
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Shopify\\ Demo",
 					"$(SRCROOT)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Shopify Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -871,12 +1058,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = app.shopifydemo.com;
 				PRODUCT_NAME = "Retail Sample";
-				PROVISIONING_PROFILE_SPECIFIER = ShopifyDemo;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;

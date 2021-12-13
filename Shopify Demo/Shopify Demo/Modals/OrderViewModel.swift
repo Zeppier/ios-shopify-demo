@@ -1,7 +1,7 @@
 
 
 import Foundation
-import Buy
+import MobileBuySDK
 final class OrderViewModel: ViewModel {
     
     typealias ModelType = Storefront.OrderEdge

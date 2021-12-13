@@ -1,7 +1,7 @@
 
 
-import Buy
-import Pay
+import MobileBuySDK
+//import Pay
 extension AddressViewModel {
         
     var payAddress: PayAddress {

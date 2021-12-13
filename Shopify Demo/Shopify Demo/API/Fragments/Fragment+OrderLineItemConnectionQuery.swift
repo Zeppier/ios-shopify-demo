@@ -1,6 +1,6 @@
 
 
-import Buy
+import MobileBuySDK
 extension Storefront.OrderLineItemConnectionQuery {
     
     @discardableResult

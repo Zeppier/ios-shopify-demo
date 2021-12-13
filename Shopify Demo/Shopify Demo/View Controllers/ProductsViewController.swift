@@ -2,7 +2,7 @@
 //
 
 import UIKit
-import Buy
+import MobileBuySDK
 import UserNotifications
 import Intempt
 
@@ -25,10 +25,27 @@ class ProductsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
-        //status, result, error
-        /*IntemptTracker.beacon(withOrgId: BeaconConfig.orgId, andSourceId: BeaconConfig.sourceId, andToken: BeaconConfig.token, andDeviceUUID: BeaconConfig.uuid) { (status, result, error) in
+       
+        self.configureCollectionView()
+        
+        Client.shared.fetchProducts(in: self.collection) { products in
+            if let products = products {
+                self.products = products
+                self.collectionView.reloadData()
+            }
+        }
+        
+        let arrProductBuy = NSMutableArray()
+        let dictProductBuy = NSMutableDictionary()
+        dictProductBuy.setValue(self.collection.title, forKey: "categoryName")
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dictProductBuy.setValue(dateFormatter.string(from:Date()), forKey: "date");
+        arrProductBuy.add(dictProductBuy)
+        
+        IntemptTracker.track("product_category_viewed", withProperties: arrProductBuy as? [Any]) { (status, result, error) in
             if(status) {
-                NSLog("Beacon Initalization successful.")
+                print("product_category_viewed")
                 if let dictResult = result as? [String: Any] {
                     print(dictResult)
                 }
@@ -37,27 +54,6 @@ class ProductsViewController: UIViewController {
                 if let error = error {
                     print(error.localizedDescription)
                 }
-            }
-        }*/
-        
-        IntemptTracker.beacon(withOrgId: BeaconConfig.orgId, andSourceId: BeaconConfig.sourceId, andToken: BeaconConfig.token, andDeviceUUID: BeaconConfig.uuid) { (status, result, error) in
-            if(status) {
-                NSLog("beacon initialization successful")
-            }
-            else {
-                if let error = error {
-                    print(error.localizedDescription)
-                }
-            }
-        }
-        IntemptClient.shared()?.delegate = self
-
-        self.configureCollectionView()
-        
-        Client.shared.fetchProducts(in: self.collection) { products in
-            if let products = products {
-                self.products = products
-                self.collectionView.reloadData()
             }
         }
     }
@@ -224,15 +220,3 @@ extension ProductsViewController: ProductDetailsDelegate {
     }
 }
 
-extension ProductsViewController:intemptDelegate {
-    // MARK: iBeacon Delegate Methods
-    
-    func didEnterRegion(_ beaconData: CLBeacon!) {
-        self.postNotification(body: "You entered in the store")
-    }
-    
-    func didExitRegion(_ beaconData: CLBeacon!) {
-        self.postNotification(body: "You exited from the store!")
-    }
-
-}
