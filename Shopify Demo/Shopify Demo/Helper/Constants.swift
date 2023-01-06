@@ -30,11 +30,14 @@ struct API {
 }
 
 struct IntemptOptions {
-    ///Please go to https://app.intempt.com/home and obtain Intempt credentials
-    ///Source = Shopify Demp app
-    static let orgId = "test-organization-x1"
-    static let sourceId = "302664524644634624"
-    static let token = "LpJSBrZTGUd125TsHKCbQ_LdNNqcQamg.Qy2xNGiw_4i9wgzNTl7s2kqlaJbgbIh-aPeFJeqPopVKEEz-F-18fNh3wKI4D8Ig"
+    ///Please go to https://app.staging.intempt.com/sources/ and obtain Intempt credentials
+    ///Source = Intempt eCommerce Store,
+    ///whb.niazi619@gmail.com
+    ///Wahab_123
+    static let orgId = "ios-sdk-demo"
+    static let projectId = "iOS_demo_2023"
+    static let sourceId = "444253541663391744"
+    static let token = "13d79c0932674cdc8fc1d362ba8f2b4a.9923fde4f7594f4d886caa3d8e04d616"
 }
 
 /// This is optional. If you use beacon fetaures then only you should use this

@@ -19,12 +19,13 @@ typedef void(^CompletionHandler)(BOOL status, id result, NSError *error);
 /**
  Call this method from ScenseDelegate's `scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions)` or AppDelegate's  `application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?)` for your app to start tracker during launch. Alternatively you can call this method at any ViewController's  `viewDidLoad` method. Wherever you call it will initilaze & track the whole app.
  @param orgId  Your Intempt Organization ID generated from intempt developer console
+ @param projectId  Your Intempt Project ID generated from intempt developer console
  @param sourceId Your Intempt Source ID generated from intempt developer console
  @param token Your Intempt Source Token generated from intempt developer console
  @param settings A configuration object specifying settings like queueEnabled, timeBuffer, retryLimit, initialDelay, retryDelay, isInputTextCaptureEnabled. For more details please look into `IntemptConfig` class.
  @note iOS 13 above should implement it on ScenseDelegate
 */
-+ (void)trackingWithOrgId:(NSString*)orgId withSourceId:(NSString*)sourceId withToken:(NSString*)token withConfig:(id)settings onCompletion:(CompletionHandler)handler;
++ (void)trackingWithOrgId:(NSString*)orgId withProjectId:(NSString*)projectId withSourceId:(NSString*)sourceId withToken:(NSString*)token withConfig:(id)settings onCompletion:(CompletionHandler)handler;
 
 /**
  Use this method when you want to set a unique identifier (email or phone no.) for your app.

@@ -101,6 +101,8 @@
 		EDFADF8724FA32540076A1FE /* ProductDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDFADF7B24FA32530076A1FE /* ProductDetailsCell.xib */; };
 		EDFADF8824FA32540076A1FE /* CartNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFADF7C24FA32530076A1FE /* CartNavigationController.swift */; };
 		EDFADF8A24FA32B40076A1FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDFADF8924FA32B40076A1FE /* Main.storyboard */; };
+		FA946CCB296802640066A28A /* Intempt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA946CC92968025E0066A28A /* Intempt.xcframework */; };
+		FA946CCC296802640066A28A /* Intempt.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA946CC92968025E0066A28A /* Intempt.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FAA89FA5274E1E57002C4634 /* LocationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA89FA4274E1E57002C4634 /* LocationsManager.swift */; };
 		FABA775D2767623D007530C2 /* DeliveryAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA775C2767623C007530C2 /* DeliveryAddressViewController.swift */; };
 		FABA777427676D21007530C2 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA776127676D20007530C2 /* IQTextView.swift */; };
@@ -119,8 +121,6 @@
 		FABA778127676D21007530C2 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA777127676D21007530C2 /* IQUITextFieldView+Additions.swift */; };
 		FABA778227676D21007530C2 /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA777227676D21007530C2 /* IQUIView+Hierarchy.swift */; };
 		FABA778327676D21007530C2 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA777327676D21007530C2 /* IQNSArray+Sort.swift */; };
-		FABA77852767861E007530C2 /* Intempt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABA77842767861E007530C2 /* Intempt.xcframework */; };
-		FABA77862767863E007530C2 /* Intempt.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FABA77842767861E007530C2 /* Intempt.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FAEDC2F02756413E00881BFE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDC2EF2756413E00881BFE /* UserModel.swift */; };
 		FAEDC2F22756458F00881BFE /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDC2F12756458F00881BFE /* String+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -132,7 +132,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FABA77862767863E007530C2 /* Intempt.xcframework in Embed Frameworks */,
+				FA946CCC296802640066A28A /* Intempt.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,7 +181,7 @@
 		5C5867C8033B88F03D7200E8 /* Pods-Shopify Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopify Demo.release.xcconfig"; path = "Target Support Files/Pods-Shopify Demo/Pods-Shopify Demo.release.xcconfig"; sourceTree = "<group>"; };
 		EBF1512F5341222D2DB47011 /* Pods-Shopify Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopify Demo.debug.xcconfig"; path = "Target Support Files/Pods-Shopify Demo/Pods-Shopify Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		ED6C22AB24FE3D9700F4F740 /* PushManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushManager.swift; sourceTree = "<group>"; };
-		EDFADEB924FA2E2A0076A1FE /* Retail Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Retail Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDFADEB924FA2E2A0076A1FE /* Intempt eCommerce Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Intempt eCommerce Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFADEBE24FA2E2A0076A1FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EDFADEC524FA2E2C0076A1FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDFADEC824FA2E2C0076A1FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -239,6 +239,7 @@
 		EDFADF7B24FA32530076A1FE /* ProductDetailsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailsCell.xib; sourceTree = "<group>"; };
 		EDFADF7C24FA32530076A1FE /* CartNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartNavigationController.swift; sourceTree = "<group>"; };
 		EDFADF8924FA32B40076A1FE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FA946CC92968025E0066A28A /* Intempt.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Intempt.xcframework; sourceTree = "<group>"; };
 		FAA89FA4274E1E57002C4634 /* LocationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsManager.swift; sourceTree = "<group>"; };
 		FABA775C2767623C007530C2 /* DeliveryAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressViewController.swift; sourceTree = "<group>"; };
 		FABA776127676D20007530C2 /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
@@ -257,7 +258,6 @@
 		FABA777127676D21007530C2 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
 		FABA777227676D21007530C2 /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
 		FABA777327676D21007530C2 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
-		FABA77842767861E007530C2 /* Intempt.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Intempt.xcframework; sourceTree = "<group>"; };
 		FAEDC2EF2756413E00881BFE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		FAEDC2F12756458F00881BFE /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -268,7 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29B95608A7517AD3B411E7A3 /* Pods_Shopify_Demo.framework in Frameworks */,
-				FABA77852767861E007530C2 /* Intempt.xcframework in Frameworks */,
+				FA946CCB296802640066A28A /* Intempt.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +404,7 @@
 		EDFADEB024FA2E2A0076A1FE = {
 			isa = PBXGroup;
 			children = (
-				FABA77842767861E007530C2 /* Intempt.xcframework */,
+				FA946CC92968025E0066A28A /* Intempt.xcframework */,
 				EDFADEBB24FA2E2A0076A1FE /* Shopify Demo */,
 				EDFADEBA24FA2E2A0076A1FE /* Products */,
 				4A5D63C718B1046768CBAD73 /* Frameworks */,
@@ -415,7 +415,7 @@
 		EDFADEBA24FA2E2A0076A1FE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EDFADEB924FA2E2A0076A1FE /* Retail Sample.app */,
+				EDFADEB924FA2E2A0076A1FE /* Intempt eCommerce Store.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -620,25 +620,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EDFADEB824FA2E2A0076A1FE /* Shopify Demo */ = {
+		EDFADEB824FA2E2A0076A1FE /* Intempt eCommerce Store */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EDFADECD24FA2E2C0076A1FE /* Build configuration list for PBXNativeTarget "Shopify Demo" */;
+			buildConfigurationList = EDFADECD24FA2E2C0076A1FE /* Build configuration list for PBXNativeTarget "Intempt eCommerce Store" */;
 			buildPhases = (
 				D06ED235E891FB5B91F36FB6 /* [CP] Check Pods Manifest.lock */,
 				EDFADEB524FA2E2A0076A1FE /* Sources */,
 				EDFADEB624FA2E2A0076A1FE /* Frameworks */,
+				1A83FE88274EAC0600220C6C /* Embed Frameworks */,
 				EDFADEB724FA2E2A0076A1FE /* Resources */,
 				0CFCC076251628D1009CBE9D /* ShellScript */,
 				A20E55E3E48A26527311AC22 /* [CP] Embed Pods Frameworks */,
-				1A83FE88274EAC0600220C6C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Shopify Demo";
+			name = "Intempt eCommerce Store";
 			productName = "IntemptShop Demo";
-			productReference = EDFADEB924FA2E2A0076A1FE /* Retail Sample.app */;
+			productReference = EDFADEB924FA2E2A0076A1FE /* Intempt eCommerce Store.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -656,7 +656,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EDFADEB424FA2E2A0076A1FE /* Build configuration list for PBXProject "Shopify Demo" */;
+			buildConfigurationList = EDFADEB424FA2E2A0076A1FE /* Build configuration list for PBXProject "Intempt eCommerce Store" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -669,7 +669,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EDFADEB824FA2E2A0076A1FE /* Shopify Demo */,
+				EDFADEB824FA2E2A0076A1FE /* Intempt eCommerce Store */,
 			);
 		};
 /* End PBXProject section */
@@ -1005,7 +1005,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Shopify Demo/Retail Sample.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10.2.1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = A3K7YHSW33;
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -1017,15 +1017,16 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Shopify Demo/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Intempt eCommerce Store";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = app.shopifydemo.com;
-				PRODUCT_NAME = "Retail Sample";
+				PRODUCT_NAME = "Intempt eCommerce Store";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1041,7 +1042,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Shopify Demo/Retail Sample.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10.2.1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = A3K7YHSW33;
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -1053,14 +1054,15 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Shopify Demo/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Intempt eCommerce Store";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = app.shopifydemo.com;
-				PRODUCT_NAME = "Retail Sample";
+				PRODUCT_NAME = "Intempt eCommerce Store";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1071,7 +1073,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EDFADEB424FA2E2A0076A1FE /* Build configuration list for PBXProject "Shopify Demo" */ = {
+		EDFADEB424FA2E2A0076A1FE /* Build configuration list for PBXProject "Intempt eCommerce Store" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDFADECB24FA2E2C0076A1FE /* Debug */,
@@ -1080,7 +1082,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EDFADECD24FA2E2C0076A1FE /* Build configuration list for PBXNativeTarget "Shopify Demo" */ = {
+		EDFADECD24FA2E2C0076A1FE /* Build configuration list for PBXNativeTarget "Intempt eCommerce Store" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDFADECE24FA2E2C0076A1FE /* Debug */,

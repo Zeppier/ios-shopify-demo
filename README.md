@@ -10,7 +10,7 @@ A sample app which demonstrates how to configure ecommerce with the combination 
 
 ## Installation
 
-1. Download the `Intempt.framework` from [here](https://github.com/intempt/intempt-intemptios).
+1. Download the `Intempt.framework` from [here](https://github.com/intempt/).
 
 2. Download the code from this repo. 
 3. Navigate inside the `IntemptShop Demo` folder and then run `pod install`

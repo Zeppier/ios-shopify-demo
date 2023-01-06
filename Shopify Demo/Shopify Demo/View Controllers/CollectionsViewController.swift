@@ -137,6 +137,12 @@ class CollectionsViewController: UIViewController, LoginControllerDelegate {
     
     private func fetchSegmentWith(sourceId:String, visitorId:String) {
         
+        //// api is not working, so temporary returned from here
+        self.clickAction(self)
+        self.fetchCollections()
+        
+        
+        /*
         let strUrl = API.baseURL + API.segment + "?sourceId=\(sourceId)&profile={\"visitorId\":\"\(visitorId)\"}"
         //let strUrl = API.baseURL + "playground/segmentations/latest?profileId=120946287348477954"
         
@@ -182,7 +188,7 @@ class CollectionsViewController: UIViewController, LoginControllerDelegate {
                 }
             }
         }
-        dataTask.resume()
+        dataTask.resume() */
     }
     
     //  MARK: - Navigate to Product -

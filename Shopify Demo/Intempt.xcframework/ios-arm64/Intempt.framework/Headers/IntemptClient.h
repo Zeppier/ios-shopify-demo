@@ -24,10 +24,11 @@ typedef void(^CompletionHandler)(BOOL status, id result, NSError *error);
 /**
  Retuns a fully initialzed `IntemptClient` object
  @param organizationId Organization Id
+ @param projectId Project Id
  @param trackerId  Tracker Id
  @param token Source token
 */
-+ (IntemptClient *)sharedClientWithOrganizationId:(NSString *)organizationId withTrackerId:(NSString *)trackerId withToken:(NSString *)token withConfig:(id)settings withCompletion:(CompletionHandler)handler;
++ (IntemptClient *)sharedClientWithOrganizationId:(NSString *)organizationId withProjectId:(NSString *)projectId withTrackerId:(NSString *)trackerId withToken:(NSString *)token withConfig:(id)settings withCompletion:(CompletionHandler)handler;
 
 /**
  Retuns a fully initialzed `IntemptClient` object
@@ -88,23 +89,25 @@ typedef void(^CompletionHandler)(BOOL status, id result, NSError *error);
  Otherwise, just use [IntemptClient sharedClient].
  
  @param organizationId Your Intempt Organization ID.
- @param trackerId Your Intempt Tracker ID.
+ @param projectId Your Intempt project ID.
+ @param trackerId Your Intempt datasourcce ID.
  @param token Your Intempt Tracker security token.
  @return An initialized instance of ITClient.
  */
-- (id)initWithOrganizationId:(NSString *)organizationId withTrackerId:(NSString *)trackerId withToken:(NSString *)token withConfig:(id)settings withCompletion:(CompletionHandler)handler;
+- (id)initWithOrganizationId:(NSString *)organizationId withProjectId:(NSString*)projectId withTrackerId:(NSString *)trackerId withToken:(NSString *)token withConfig:(id)settings withCompletion:(CompletionHandler)handler;
 
 /**
  Call this if your code needs to use more than one Intempt project along with some extra properties & properties overrides. By convention, if you
  call this, you're responsible for releasing the returned instance once you're finished with it.
  @param organizationId Your Intempt Organization ID.
+ @param projectId Your Intempt project ID.
  @param sourceId Your Intempt Tracker ID.
  @param token Your Intempt Tracker security token.
  @param propertiesOverrides A property Dictonary
  @param propertiesOverridesBlock A completion block
  @return An initialized instance of ITClient.
  */
--(id)initWithOrganizationId:(NSString *)organizationId withTrackerId:(NSString *)sourceId withToken:(NSString *)token withConfig:(id)settings withPropertiesOverrides:(NSDictionary *)propertiesOverrides withPropertiesOverridesBlock:(NSDictionary *(^)(NSString *))propertiesOverridesBlock withCompletion:(CompletionHandler)handler;
+-(id)initWithOrganizationId:(NSString *)organizationId withProjectId:(NSString*)projectId withTrackerId:(NSString *)sourceId withToken:(NSString *)token withConfig:(id)settings withPropertiesOverrides:(NSDictionary *)propertiesOverrides withPropertiesOverridesBlock:(NSDictionary *(^)(NSString *))propertiesOverridesBlock withCompletion:(CompletionHandler)handler;
 
 /**
 Use this Instance method when you want to add a specific event
