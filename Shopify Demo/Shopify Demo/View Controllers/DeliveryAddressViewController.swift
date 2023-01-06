@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intempt
 
 class DeliveryAddressViewController: UIViewController {
 
@@ -61,8 +62,35 @@ class DeliveryAddressViewController: UIViewController {
         address.street = street
         address.state = state
         address.zipcode = zipCode
+        
+        self.addDeliveryEvent(street, house: house, city: city, state: state, zip: zipCode)
+        
         self.dismiss(animated: false, completion: nil)
         self.completionHandler?(address)
     }
 
+    func addDeliveryEvent(_ street:String,house:String, city:String, state:String, zip:String){
+        let arrFieldsArray = NSMutableArray()
+        let filedsEvent = NSMutableDictionary()
+        filedsEvent.setValue(street, forKey: "street")
+        filedsEvent.setValue(house, forKey: "house")
+        filedsEvent.setValue(city, forKey: "city")
+        filedsEvent.setValue(state, forKey: "state")
+        filedsEvent.setValue(zip, forKey: "zip")
+        arrFieldsArray.add(filedsEvent)
+        
+        IntemptTracker.track("delivery_address", withProperties: arrFieldsArray as? [Any]) { (status, result, error) in
+            if(status) {
+                print("delivery_address")
+                if let dictResult = result as? [String: Any] {
+                    print(dictResult)
+                }
+            }
+            else {
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
 }

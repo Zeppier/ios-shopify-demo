@@ -99,6 +99,53 @@ class LoginViewController: UIViewController {
 //  MARK: - Actions -
 extension LoginViewController {
     
+    func addLoginEvent(_ email:String, status:Bool){
+        let arrFieldsArray = NSMutableArray()
+        let filedsEvent = NSMutableDictionary()
+        filedsEvent.setValue(email, forKey: "email")
+        filedsEvent.setValue(status, forKey: "status")
+        arrFieldsArray.add(filedsEvent)
+        
+        IntemptTracker.track("login", withProperties: arrFieldsArray as? [Any]) { (status, result, error) in
+            if(status) {
+                print("login")
+                if let dictResult = result as? [String: Any] {
+                    print(dictResult)
+                }
+            }
+            else {
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
+    
+    func addSignupEvent(_ email:String,fName:String, lName:String, phone:String, status:Bool){
+        let arrFieldsArray = NSMutableArray()
+        let filedsEvent = NSMutableDictionary()
+        filedsEvent.setValue(email, forKey: "email")
+        filedsEvent.setValue(fName, forKey: "fName")
+        filedsEvent.setValue(lName, forKey: "lName")
+        filedsEvent.setValue(phone, forKey: "phone")
+        filedsEvent.setValue(status, forKey: "status")
+        arrFieldsArray.add(filedsEvent)
+        
+        IntemptTracker.track("signup", withProperties: arrFieldsArray as? [Any]) { (status, result, error) in
+            if(status) {
+                print("login")
+                if let dictResult = result as? [String: Any] {
+                    print(dictResult)
+                }
+            }
+            else {
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
+    
     @IBAction private func textFieldValueDidChange(textField: UITextField) {
         self.updateLoginState()
         self.updateSignupState()
@@ -119,6 +166,9 @@ extension LoginViewController {
             }
         }
         if (foundUser != nil){
+            
+            self.addLoginEvent(email, status: true)
+            
             IntemptTracker.identify(email, withProperties: nil) { (status, result, error) in
                 if(status) {
                     NSLog("Identify successful")
@@ -138,6 +188,7 @@ extension LoginViewController {
             self.delegate?.loginController(self, didLoginWith: self.email, passowrd: self.password)
         }else{
             showAlert(title: "Oops!", message: "Invalid email address or password.", vc: self)
+            self.addLoginEvent(email, status: false)
         }
     }
     @IBAction func signupBtnAction(_ sender: UIButton)
@@ -177,6 +228,8 @@ extension LoginViewController {
             showAlert(title: "Oops!", message: "User with same email already exists. Please try login.", vc: self)
             return
         }else{
+            self.addSignupEvent(email, fName: fName, lName: lastName, phone: phone, status: true)
+            
             IntemptTracker.identify(signUpEmail, withProperties: nil) { (status, result, error) in
                 if(status) {
                     NSLog("Identify successful")
