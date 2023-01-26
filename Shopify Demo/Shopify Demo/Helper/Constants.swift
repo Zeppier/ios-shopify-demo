@@ -34,10 +34,10 @@ struct IntemptOptions {
     ///Source = Intempt eCommerce Store,
     ///whb.niazi619@gmail.com
     ///Wahab_123
-    static let orgId = "ios-sdk-demo"
-    static let projectId = "iOS_demo_2023"
-    static let sourceId = "444253541663391744"
-    static let token = "13d79c0932674cdc8fc1d362ba8f2b4a.9923fde4f7594f4d886caa3d8e04d616"
+    static let orgId = "demo-organization"
+    static let projectId = "demo-project"
+    static let sourceId = "451472423155269632"
+    static let token = "67fc2a5ec4ec49bd958111dee290c814.7247e4736bbf4a218022bfdf548ae220"
 }
 
 /// This is optional. If you use beacon fetaures then only you should use this
