@@ -36,6 +36,14 @@ typedef void(^CompletionHandler)(BOOL status, id result, NSError *error);
 + (void)identify:(NSString*)identity withProperties:(NSDictionary*)userProperties onCompletion:(CompletionHandler)handler;
 
 /**
+ Use this method when you want to log consent event for your app.
+ @param regulation  Marketing
+ @param purpose A purpose i.e, allow to send emial and promotions
+*/
++ (void)consent:(NSString*)regulation withProperties:(NSString*)purpose onCompletion:(CompletionHandler)handler;
+
+
+/**
  Use this method when you specific tracking information to server. Creating custom Schema is mandatory to use this method. Go to your project on https://app.intempt.com and select organization and then select source and click on `Visit Schema` to add custom Schema
  Without adding collection in schema on https://app.intempt.com custom events will not be saved, also make sure properties added in schema have same data types as your data, if you will try sending string data but field data type is int then you will get error
  @param collectionName Custom Schema name (Exclude the unique id)

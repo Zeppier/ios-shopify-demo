@@ -21,6 +21,8 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var loginButton:   UIButton!
     @IBOutlet private weak var usernameField: UITextField!
     @IBOutlet private weak var passwordField: UITextField!
+    @IBOutlet weak var btnConsent:UIButton!
+    @IBOutlet weak var btnConsentLogin:UIButton!
     
     weak var delegate: LoginControllerDelegate?
     
@@ -93,6 +95,15 @@ class LoginViewController: UIViewController {
         }
     }
     
+    @IBAction func consentBoxPressed(){
+        btnConsent.isSelected = !btnConsent.isSelected
+        btnConsentLogin.isSelected = btnConsent.isSelected
+        if btnConsent.isSelected{
+            IntemptTracker.consent("Marketing", withProperties: "Yes, email me offers, style updates and special invites to sales and events.") { status, result, error in
+                print(error ?? status)
+            }
+        }
+    }
 }
 
 
@@ -144,6 +155,9 @@ extension LoginViewController {
                 }
             }
         }
+        
+        
+        
     }
     
     @IBAction private func textFieldValueDidChange(textField: UITextField) {

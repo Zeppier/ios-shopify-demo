@@ -63,6 +63,10 @@ class DeliveryAddressViewController: UIViewController {
         address.state = state
         address.zipcode = zipCode
         
+        var addresses = UserSession.getAllAddresses()
+        addresses.insert(address, at: 0)
+        UserSession.saveNewAdress(obj: addresses)
+        
         self.addDeliveryEvent(street, house: house, city: city, state: state, zip: zipCode)
         
         self.dismiss(animated: false, completion: nil)

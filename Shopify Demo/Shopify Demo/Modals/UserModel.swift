@@ -9,6 +9,7 @@
 import Foundation
 let savedUser  = "SavedUser"
 let savedAllUsers  = "savedAllUsers"
+let savedAllAddresses  = "savedAllAddresses"
 
 class UserModel: Codable {
     var email:String?
@@ -74,6 +75,29 @@ class UserSession {
             }
         }
         return [UserModel]()
+    }
+    
+    static func saveNewAdress(obj: [AddressModel]){
+        let key = UserSession.getUser()?.email ?? "address"
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(obj) {
+            let defaults = UserDefaults.standard
+            defaults.set(encoded, forKey: key)
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
+    static func getAllAddresses() -> [AddressModel]{
+        
+        let key = UserSession.getUser()?.email ?? "address"
+        let defaults = UserDefaults.standard
+        if let savedData = defaults.object(forKey: key) as? Data {
+            let decoder = JSONDecoder()
+            if let list = try? decoder.decode([AddressModel].self, from: savedData) {
+                return list
+            }
+        }
+        return [AddressModel]()
     }
 }
 

@@ -52,7 +52,7 @@ class TotalsViewController: UIViewController, LoginControllerDelegate {
         self.loadPurchaseOptions()
     }
     @IBAction func addDeliveryAddress(){
-        let coordinator: DeliveryAddressViewController = self.storyboard!.instantiateViewController()
+        let coordinator: MyAddressesViewController = self.storyboard!.instantiateViewController()
         coordinator.completionHandler = { add in
             if let addrs = add{
                 self.addressModel = addrs

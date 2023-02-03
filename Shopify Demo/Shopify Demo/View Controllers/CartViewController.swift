@@ -48,7 +48,7 @@ class CartViewController: ParallaxViewController {
     
     private func configureParallax() {
         self.layout       = .headerAbove
-        self.headerHeight = self.view.bounds.width * 0.5 // 2:1 ratio
+        self.headerHeight = 200
         self.multiplier   = 0.0
     }
     
