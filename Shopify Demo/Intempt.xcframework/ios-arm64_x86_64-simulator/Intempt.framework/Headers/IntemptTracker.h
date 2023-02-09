@@ -39,8 +39,9 @@ typedef void(^CompletionHandler)(BOOL status, id result, NSError *error);
  Use this method when you want to log consent event for your app.
  @param regulation  Marketing
  @param purpose A purpose i.e, allow to send emial and promotions
+ @param consented true or false
 */
-+ (void)consent:(NSString*)regulation withProperties:(NSString*)purpose onCompletion:(CompletionHandler)handler;
++ (void)consent:(NSString*)regulation withProperties:(NSString*)purpose consented:(BOOL)consented onCompletion:(CompletionHandler)handler;
 
 
 /**

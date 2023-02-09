@@ -98,11 +98,7 @@ class LoginViewController: UIViewController {
     @IBAction func consentBoxPressed(){
         btnConsent.isSelected = !btnConsent.isSelected
         btnConsentLogin.isSelected = btnConsent.isSelected
-        if btnConsent.isSelected{
-            IntemptTracker.consent("Marketing", withProperties: "Yes, email me offers, style updates and special invites to sales and events.") { status, result, error in
-                print(error ?? status)
-            }
-        }
+        
     }
 }
 
@@ -130,6 +126,9 @@ extension LoginViewController {
                 }
             }
         }
+        IntemptTracker.consent("GDPR", withProperties: "Marketing", consented: btnConsentLogin.isSelected) { status, result, error in
+            print(error ?? status)
+        }
     }
     
     func addSignupEvent(_ email:String,fName:String, lName:String, phone:String, status:Bool){
@@ -156,8 +155,9 @@ extension LoginViewController {
             }
         }
         
-        
-        
+        IntemptTracker.consent("GDPR", withProperties: "Marketing", consented: btnConsent.isSelected) { status, result, error in
+            print(error ?? status)
+        }
     }
     
     @IBAction private func textFieldValueDidChange(textField: UITextField) {

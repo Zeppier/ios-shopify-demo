@@ -58,17 +58,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func initializeIntemptTracking() {
         //Initialize Intempt SDK
         let intemptConfig = IntemptConfig(queueEnabled: true, withItemsInQueue: 5, withTimeBuffer: 10, withInitialDelay: 0.3, withInputTextCaptureDisabled: false)
-        IntemptTracker.tracking(withOrgId: IntemptOptions.orgId, withProjectId: IntemptOptions.projectId, withSourceId: IntemptOptions.sourceId, withToken: IntemptOptions.token, withConfig: intemptConfig) { (status, result, error) in
-            if(status) {
-                if let dictResult = result as? [String: Any] {
-                    print(dictResult)
-                }
-            }
-            else {
-                if let error = error {
-                    print(error.localizedDescription)
-                }
-            }
+        IntemptTracker.tracking(withOrgId: IntemptOptions.orgId, withProjectId: IntemptOptions.projectId, withSourceId: IntemptOptions.sourceId, withToken: IntemptOptions.token, withConfig: nil) { (status, result, error) in
+            
         }
         IntemptClient.enableLogging()
     }
