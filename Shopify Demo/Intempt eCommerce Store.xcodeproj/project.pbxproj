@@ -103,6 +103,8 @@
 		EDFADF8A24FA32B40076A1FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDFADF8924FA32B40076A1FE /* Main.storyboard */; };
 		FA0DCDFB298D42FC004BDFA3 /* MyAddressesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DCDF9298D42FC004BDFA3 /* MyAddressesViewController.swift */; };
 		FA0DCDFE298D4410004BDFA3 /* DeliveryAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DCDFD298D4410004BDFA3 /* DeliveryAddressTableViewCell.swift */; };
+		FA2CCAFA29962B7E00406B34 /* Intempt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2CCAF829962B6100406B34 /* Intempt.xcframework */; };
+		FA2CCAFB29962B7E00406B34 /* Intempt.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA2CCAF829962B6100406B34 /* Intempt.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FAA89FA5274E1E57002C4634 /* LocationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA89FA4274E1E57002C4634 /* LocationsManager.swift */; };
 		FABA775D2767623D007530C2 /* DeliveryAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA775C2767623C007530C2 /* DeliveryAddressViewController.swift */; };
 		FABA777427676D21007530C2 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA776127676D20007530C2 /* IQTextView.swift */; };
@@ -121,8 +123,6 @@
 		FABA778127676D21007530C2 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA777127676D21007530C2 /* IQUITextFieldView+Additions.swift */; };
 		FABA778227676D21007530C2 /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA777227676D21007530C2 /* IQUIView+Hierarchy.swift */; };
 		FABA778327676D21007530C2 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA777327676D21007530C2 /* IQNSArray+Sort.swift */; };
-		FAE382DF299512CF004EF29C /* Intempt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE382DD299512C6004EF29C /* Intempt.xcframework */; };
-		FAE382E0299512CF004EF29C /* Intempt.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAE382DD299512C6004EF29C /* Intempt.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FAEDC2F02756413E00881BFE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDC2EF2756413E00881BFE /* UserModel.swift */; };
 		FAEDC2F22756458F00881BFE /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDC2F12756458F00881BFE /* String+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -134,7 +134,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FAE382E0299512CF004EF29C /* Intempt.xcframework in Embed Frameworks */,
+				FA2CCAFB29962B7E00406B34 /* Intempt.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +243,7 @@
 		EDFADF8924FA32B40076A1FE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FA0DCDF9298D42FC004BDFA3 /* MyAddressesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAddressesViewController.swift; sourceTree = "<group>"; };
 		FA0DCDFD298D4410004BDFA3 /* DeliveryAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressTableViewCell.swift; sourceTree = "<group>"; };
+		FA2CCAF829962B6100406B34 /* Intempt.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Intempt.xcframework; sourceTree = "<group>"; };
 		FAA89FA4274E1E57002C4634 /* LocationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsManager.swift; sourceTree = "<group>"; };
 		FABA775C2767623C007530C2 /* DeliveryAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressViewController.swift; sourceTree = "<group>"; };
 		FABA776127676D20007530C2 /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
@@ -261,7 +262,6 @@
 		FABA777127676D21007530C2 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
 		FABA777227676D21007530C2 /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
 		FABA777327676D21007530C2 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
-		FAE382DD299512C6004EF29C /* Intempt.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Intempt.xcframework; sourceTree = "<group>"; };
 		FAEDC2EF2756413E00881BFE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		FAEDC2F12756458F00881BFE /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -272,7 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29B95608A7517AD3B411E7A3 /* Pods_Shopify_Demo.framework in Frameworks */,
-				FAE382DF299512CF004EF29C /* Intempt.xcframework in Frameworks */,
+				FA2CCAFA29962B7E00406B34 /* Intempt.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +408,7 @@
 		EDFADEB024FA2E2A0076A1FE = {
 			isa = PBXGroup;
 			children = (
-				FAE382DD299512C6004EF29C /* Intempt.xcframework */,
+				FA2CCAF829962B6100406B34 /* Intempt.xcframework */,
 				EDFADEBB24FA2E2A0076A1FE /* Shopify Demo */,
 				EDFADEBA24FA2E2A0076A1FE /* Products */,
 				4A5D63C718B1046768CBAD73 /* Frameworks */,
@@ -1031,7 +1031,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.9;
+				MARKETING_VERSION = 2.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = app.shopifydemo.com;
 				PRODUCT_NAME = "Intempt eCommerce Store";
@@ -1068,7 +1068,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.9;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.shopifydemo.com;
 				PRODUCT_NAME = "Intempt eCommerce Store";
 				PROVISIONING_PROFILE_SPECIFIER = "";
