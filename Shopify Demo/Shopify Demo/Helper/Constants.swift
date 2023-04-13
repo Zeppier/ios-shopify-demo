@@ -18,8 +18,9 @@ let APP_DELEGATE: AppDelegate = UIApplication.shared.delegate as! AppDelegate
 enum Environment: String {
     case staging = "https://api.staging.intempt.com/v1/"
     case production = "https://api.intempt.com/v1/"
+    case qa = "https://api.qa.intempt.com/v1/"
 }
-let environment: Environment = .production
+let environment: Environment = .qa
 
 
 struct API {
@@ -37,7 +38,7 @@ struct IntemptOptions {
     static let orgId = "demo-org"
     static let projectId = "demo-project"
     static let sourceId = "479769656329904128"
-    static let token = "d715552459224f8f84228d778635176c.ebbc4d7b538d4052ae724dfda91f4355"
+    static let token = "2734b0ba610140ebacee65d5ca03149d.d80a08bbcb4243f5901f414472a8e4fe"
     //static let token = "aa91c7709d684d75820ac4456ff0d7a1.34c41b7a90fc4790aeaaabdd65f390c7"
 }
 
